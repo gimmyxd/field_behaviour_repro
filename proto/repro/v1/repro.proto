@@ -14,5 +14,7 @@ message MyMessage {
     [
         (google.api.field_behavior) = OPTIONAL
     ];
+
+  optional string force_optional = 3;
 }
 

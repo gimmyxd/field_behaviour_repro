@@ -20,6 +20,11 @@ export class MyMessage extends Message<MyMessage> {
    */
   fieldOptional = "";
 
+  /**
+   * @generated from field: optional string force_optional = 3;
+   */
+  forceOptional?: string;
+
   constructor(data?: PartialMessage<MyMessage>) {
     super();
     proto3.util.initPartial(data, this);
@@ -30,6 +35,7 @@ export class MyMessage extends Message<MyMessage> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "field_required", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "field_optional", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "force_optional", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): MyMessage {
